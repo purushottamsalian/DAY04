@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+
+            <!-- LEFT: LOGO -->
+            <div class="logo"><span style="color:white;">Weather</span>Now</div>
+
+            <!-- CENTER: SEARCH BAR (desktop only) -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search City or Zip Code...">
+                <button type="submit">Go</button>
+            </div>
+
+            <!-- RIGHT: HAMBURGER -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <!-- NAV MENU -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Maps</a></li>
+                    <li><a href="#">Radar</a></li>
+                    <li><a href="#">Alerts</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="font-weight:300; font-size:2.5em; margin-top:15px;">Today's Weather Dashboard</h1>
+
+        <div class="main-layout">
+
+            <div class="current-weather">
+                <div class="location">London, UK</div>
+                <p style="color:#666; margin-top:-5px;">As of 4:00 PM BST</p>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <p class="temperature">16°C</p>
+                        <p style="font-size:18px; color:var(--primary-color); margin-top:-20px;">Partly Cloudy</p>
+                        <ul style="padding:0; margin-top:15px; list-style:none; font-size:14px;">
+                            <li>Humidity: 65%</li>
+                            <li>Wind: 12 mph SW</li>
+                            <li>Pressure: 1012 hPa</li>
+                        </ul>
+                    </div>
+                    <div class="weather-icon">&#9729;</div>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h2 style="font-size:24px; border-bottom:2px solid #eee; padding-bottom:10px;">5-Day Forecast</h2>
+
+                <div class="forecast-grid">
+                    <div class="day-forecast"><p>Thu</p><div class="icon">&#9728;</div><p class="temp">18°C</p><p>Sunny</p></div>
+                    <div class="day-forecast"><p>Fri</p><div class="icon">&#9730;</div><p class="temp">14°C</p><p>Rain</p></div>
+                    <div class="day-forecast"><p>Sat</p><div class="icon">&#9729;</div><p class="temp">15°C</p><p>Cloudy</p></div>
+                    <div class="day-forecast"><p>Sun</p><div class="icon">&#9728;</div><p class="temp">20°C</p><p>Warm</p></div>
+                    <div class="day-forecast"><p>Mon</p><div class="icon">&#9729;</div><p class="temp">17°C</p><p>Cloudy</p></div>
+
+                    <div class="day-forecast"><p>Tue</p><div class="icon">&#9925;</div><p class="temp">19°C</p><p>Partly Sunny</p></div>
+                    <div class="day-forecast"><p>Wed</p><div class="icon">&#9730;</div><p class="temp">13°C</p><p>Rain</p></div>
+                    <div class="day-forecast"><p>Thu</p><div class="icon">&#9729;</div><p class="temp">16°C</p><p>Cloudy</p></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 WeatherNow | Powered by Mock API</p>
+        <p>Follow us: 🌐 Instagram | 🌐 Twitter | 🌐 GitHub</p>
+    </footer>
+
+</body>
+</html>

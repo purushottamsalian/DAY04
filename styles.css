@@ -1,0 +1,177 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --text-light: #f8f8f8;
+    --text-dark: #333;
+    --bg-dark: #1e3a8a;
+    --card-bg: #ffffff;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f4f7f9;
+}
+
+/* Desktop container */
+.container {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding: 15px 0;
+    box-shadow: var(--shadow-light);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffc107;
+}
+
+/* Search */
+.search-bar {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+}
+
+.search-bar button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Navigation - Desktop */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Cards */
+.main-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.current-weather, .forecast-section {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+}
+
+.temperature { font-size: 72px; }
+.weather-icon { font-size: 80px; color: #ffc107; }
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.day-forecast {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Hamburger visible on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide search bar on mobile */
+    .search-bar {
+        display: none;
+    }
+
+    /* HIDE NAV MENU UNTIL OPENED */
+    .nav-menu ul {
+        display: none;
+        flex-direction: column;
+        background: #1e3a8a;
+        width: 100%;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    /* SHOW MENU WHEN CHECKED */
+    #menu-toggle:checked + .hamburger + .nav-menu ul {
+        display: flex;
+    }
+
+    /* Mobile layout */
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .forecast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .temperature { font-size: 56px; }
+    .weather-icon { font-size: 60px; }
+}
